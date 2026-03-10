@@ -20,12 +20,6 @@ jobs:
         python-version: ["3.13"]
     steps:
       - uses: actions/checkout@v4
-      - name: Debug checkout
-        run: |
-          echo "Current dir:"
-          pwd
-          echo "Repo contents:"
-          ls -la
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
@@ -81,7 +75,6 @@ jobs:
           pip install -r requirements.txt
           pip install -r requirements-dev.txt
       - name: Run tests with coverage gate
-        working-directory: tests
         run: |
           if [ -d "tests" ]; then
             pytest -q --maxfail=1 \
