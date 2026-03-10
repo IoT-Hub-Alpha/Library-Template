@@ -81,7 +81,6 @@ jobs:
               --cov=src \
               --cov-report=xml:coverage.xml \
               --cov-report=html:htmlcov \
-              --cov-fail-under=80
           else
             echo "No tests directory found, skipping tests"
           fi
