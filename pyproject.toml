@@ -1,3 +1,10 @@
+[tool.black]
+line-length = 88
+target-version = ["py311"]
+#exclude = '''
+#/path/to/dir/.*
+#'''
+
 [build-system]
 requires = ["setuptools>=68", "wheel"]
 build-backend = "setuptools.build_meta"
