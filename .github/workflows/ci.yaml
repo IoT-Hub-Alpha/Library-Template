@@ -20,6 +20,12 @@ jobs:
         python-version: ["3.13"]
     steps:
       - uses: actions/checkout@v4
+      - name: Debug checkout
+        run: |
+          echo "Current dir:"
+          pwd
+          echo "Repo contents:"
+          ls -la
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
