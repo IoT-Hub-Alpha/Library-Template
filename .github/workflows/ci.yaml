@@ -80,7 +80,7 @@ jobs:
             pytest -q --maxfail=1 \
               --cov=src \
               --cov-report=xml:coverage.xml \
-              --cov-report=html:htmlcov \
+              --cov-report=html:htmlcov
           else
             echo "No tests directory found, skipping tests"
           fi
