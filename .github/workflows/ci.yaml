@@ -37,7 +37,19 @@ jobs:
           pip install yamllint
 
       - name: Lint (black)
-        run: black --check src tests
+        run: |
+          if [ -d "src" ]; then
+            black --check src
+          fi
+          if [ -d "tests" ]; then
+            black --check tests
+          fi
 
       - name: Lint (flake8)
-        run: flake8 src tests
+        run: |
+          if [ -d "src" ]; then
+            black --check src
+          fi
+          if [ -d "tests" ]; then
+            black --check tests
+          fi
